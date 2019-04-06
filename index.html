@@ -5,6 +5,7 @@
 
 		<title>Jogo da velha</title>
 		<script src="jquery-2.2.1.js"></script>
+		<script src="jogo.js"></script>
 	</head>
 
 	<body>
@@ -20,61 +21,63 @@
 						<td align="center">
 							<img src="imagens/jogador_1.png" />
 							<br />
-							<input type="text" maxlength="10" placeholder="jogador_1" />
+							<input id="in_jogador_1" type="text" maxlength="10" placeholder="jogador_1" />
 						</td>
 						<td align="center">
-							<img src="imagens/iniciar.png" />
+							<img id="btn_iniciar" src="imagens/iniciar.png" />
 						</td>
 						<td align="center">
 							<img src="imagens/jogador_2.png" />
 							<br />
-							<input type="text" maxlength="10" placeholder="jogador_2" />
+							<input id="in_jogador_2" type="text" maxlength="10" placeholder="jogador_2" />
 						</td>
 					</tr>
 				</tbody>
 			</table>
 		</div>
 
-		<div id="jogo" style="margin-top: 50px; text-align: center;">
+		<div id="jogo" style="display: none; margin-top: 50px; text-align: center;">
 			<div style="display: inline-block;">
 				<img src="imagens/jogador_1.png" />
+				<br />
+				<span id="nick_jogador_1"></span>
 			</div>
 
 			<div style="display: inline-block;">
 				<table border="0">
 					<tr>
 						<td style="border-right: solid 3px red; border-bottom: solid 3px red;">
-							<div style="width: 100px; height: 100px;"></div>
+							<div class="game" id="a1" style="width: 100px; height: 100px;"></div>
 						</td>
 						<td style="border-right: solid 3px red; border-bottom: solid 3px red;">
-							<div style="width: 100px; height: 100px;"></div>
+							<div class="game" id="a2" style="width: 100px; height: 100px;"></div>
 						</td>
 						<td style="border-bottom: solid 3px red;">
-							<div style="width: 100px; height: 100px;"></div>
+							<div class="game" id="a3" style="width: 100px; height: 100px;"></div>
 						</td>
 					</tr>
 
 					<tr>
 						<td  style="border-right: solid 3px red; border-bottom: solid 3px red;">
-							<div style="width: 100px; height: 100px;"></div>
+							<div class="game" id="b1" style="width: 100px; height: 100px;"></div>
 						</td>
 						<td style="border-right: solid 3px red; border-bottom: solid 3px red;">
-							<div style="width: 100px; height: 100px;"></div>
+							<div class="game" id="b2" style="width: 100px; height: 100px;"></div>
 						</td>
 						<td style="border-bottom: solid 3px red;">
-							<div style="width: 100px; height: 100px;"></div>
+							<div class="game" id="b3" style="width: 100px; height: 100px;"></div>
 						</td>
 					</tr>
 
 					<tr>
 						<td style="border-right: solid 3px red;">
-							<div style="width: 100px; height: 100px;"></div>
+							<div class="game" id="c1" style="width: 100px; height: 100px;"></div>
 						</td>
 						<td style="border-right: solid 3px red;">
-							<div style="width: 100px; height: 100px;"></div>
+							<div class="game" id="c2" style="width: 100px; height: 100px;"></div>
 						</td>
 						<td>
-							<div style="width: 100px; height: 100px;"></div>
+							<div class="game" id="c3" style="width: 100px; height: 100px;"></div>
 						</td>
 					</tr>
 				</table>
@@ -82,6 +85,8 @@
 
 			<div style="display: inline-block;">
 				<img src="imagens/jogador_2.png" />
+				<br />
+				<span id="nick_jogador_2"></span>
 			</div>
 		</div>
 	</body>
